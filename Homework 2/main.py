@@ -1,28 +1,23 @@
-#Name-Romilkumar Patel
-# PSID-1765483
-# Section 6.17
+# Name- Romilkumar Patel
+# PSID- 1765483
+# Section 6.22
 
-password = input()
 
-modified_password = ''
+a = int(input())
+b = int(input())
+c = int(input())
 
-i = 0
-while i < len(password):
-    ch = password[i]
-    if ch == 'i':
-        modified_password += '!'
-    elif ch == 'a':
-        modified_password += '@'
-    elif ch == 'm':
-        modified_password += 'M'
-    elif ch == 'B':
-        modified_password += '8'
-    elif ch == 'o':
-        modified_password += '.'
-    else:
-        modified_password += ch
-    i += 1
+d = int(input())
+e = int(input())
+f = int(input())
 
-modified_password += "q*s"
+solution_found = False
 
-print(modified_password)
+for x in range(-10, 11):
+    for y in range(-10, 11):
+        if a * x + b * y == c and d * x + e * y == f:
+            print(x, y)
+            solution_found = True
+
+if not solution_found:
+    print("No solution")
